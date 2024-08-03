@@ -2,27 +2,44 @@ import Image from "next/image";
 import Join from "./JoinCom/JoinCom";
 export default function Hero() {
   return (
-    <div className="flex w-full h-3/4 min-h-[60rem] bg-black text-white">
-      <div className="flex w-full flex-col">
-        <div className="text-white w-full h-full">
-          <h1>CUSTOM SKIN FOR YOUR CARD</h1>
-          <span>
-            Upload your photo and get your custom skin for your card only $10
-          </span>
+    <div className="flex w-full h-3/4 min-h-[60rem] text-black">
+      <div className="flex w-11/12 h-full m-auto">
+        <div className="w-2/3 h-full">
+          <div className="text-8xl h-60 w-1/2">
+            <h1>CUSTOM SKIN</h1>
+            <h1>FOR YOUR</h1>
+            <h1>CARD</h1>
+          </div>
+
+          <div className="flex flex-col h-44 w-1/2 mt-24 text-xl">
+            <div>
+              <span>Upload your photo and get your custom</span>
+            </div>
+            <div>
+              <span>skin for your card only $10</span>
+            </div>
+          </div>
+
+          <div className="mt-14">
+            <Join></Join>
+          </div>
         </div>
 
-        <div className="flex flex-row w-full h-1/5 place-self-end">
-          <Join></Join>
+        <div className="flex w-1/3 h-full items-center justify-center">
+          <div>
+            <Image
+              src={"/TotalSeks.png"}
+              width={950}
+              height={700}
+              alt="hehe"
+            ></Image>
+            <div className="relative flex border-4 w-52 h-20 p-2.5 items-center justify-center rounded-full bg-black border-black text-white bottom-44 left-24">
+              <div className=" flex border-2 pl-10 pr-10 h-14 rounded-full items-center justify-center">
+                <span>ORDER SKIN</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="flex w-2/5 h-full justify-center">
-        <Image
-          className="self-center"
-          src={"/TotalSeks.png"}
-          alt={"alt"}
-          width={700}
-          height={700}
-        ></Image>
       </div>
     </div>
   );
