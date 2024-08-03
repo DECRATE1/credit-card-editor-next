@@ -2,8 +2,8 @@ import Image from "next/image";
 import Join from "./JoinCom/JoinCom";
 export default function Hero() {
   return (
-    <div className="flex w-full h-3/4 bg-black text-white flex-wrap">
-      <div className="flex w-1/2 flex-col">
+    <div className="flex w-full h-3/4 min-h-[60rem] bg-black text-white">
+      <div className="flex w-full flex-col">
         <div className="text-white w-full h-full">
           <h1>CUSTOM SKIN FOR YOUR CARD</h1>
           <span>
@@ -15,8 +15,15 @@ export default function Hero() {
           <Join></Join>
         </div>
       </div>
-
-      <div className="w-2/4 h-full min-w-2/4 min-h-full bg-[url('/TotalSeks.png')] bg-no-repeat bg-contain bg-right"></div>
+      <div className="flex w-2/5 h-full justify-center">
+        <Image
+          className="self-center"
+          src={"/TotalSeks.png"}
+          alt={"alt"}
+          width={700}
+          height={700}
+        ></Image>
+      </div>
     </div>
   );
 }
