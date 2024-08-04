@@ -2,7 +2,7 @@ import Image from "next/image";
 import Join from "./JoinCom/JoinCom";
 export default function Hero() {
   return (
-    <div className="flex w-full h-3/4 min-h-[60rem] text-black">
+    <div className="flex w-full h-5/6 text-black">
       <div className="flex w-11/12 h-full m-auto">
         <div className="w-2/3 h-full">
           <div className="text-8xl h-60 w-1/2">
