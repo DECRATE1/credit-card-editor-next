@@ -2,9 +2,9 @@ import Image from "next/image";
 import { FaRegCheckCircle } from "react-icons/fa";
 export default function Info() {
   return (
-    <div className="w-full min-h-[50rem]">
-      <div className="flex w-11/12 h-full m-auto">
-        <div className="flex w-1/2 h-[50rem] justify-center items-center">
+    <div className="w-full min-h-[50rem] mt-20 md:mt-0">
+      <div className="flex w-11/12 h-full m-auto flex-col md:flex-row justify-center items-center">
+        <div className="flex w-1/2 md:h-[50rem] h-[10rem] justify-center items-center">
           <div>
             <Image
               src={"/credit.png"}
@@ -15,15 +15,15 @@ export default function Info() {
           </div>
         </div>
 
-        <div className="flex w-1/2 h-[50rem] justify-center items-start flex-col">
-          <div>
-            <div className="w-10/12 mb-5">
-              <span className="text-5xl">
+        <div className="md:flex w-1/2 h-[50rem] justify-center items-start flex-col md:text-start">
+          <div className="md:block flex flex-col items-center">
+            <div className="md:w-10/12 w-full mb-5">
+              <span className="md:block md:text-start w-full flex text-center items-center justify-center text-5xl">
                 THE BEST SKIN WITH VINYL MATERIAL.
               </span>
             </div>
 
-            <div className="w-6/12 mb-5">
+            <div className="flex text-start md:w-6/12 mb-5 text-2xl">
               <span>
                 By using high quality vinyl, we have several advantages that
                 other not have
