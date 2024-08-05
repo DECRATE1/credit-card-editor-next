@@ -7,7 +7,7 @@ interface StockCardInterface {
 
 export default function StocksCard({ path, title }: StockCardInterface) {
   return (
-    <div className="flex flex-col w-80 h-72 bg-red-950 mb-5 items-center rounded-xl">
+    <div className="flex flex-col w-80 h-72 bg-white mb-5 items-center rounded-xl mt-5 text-black">
       <div>
         <Image
           src={path}

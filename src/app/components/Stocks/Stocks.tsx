@@ -1,9 +1,10 @@
+import SearchBar from "./SearchBar/SearchBar";
 import StocksCard from "./StocksCard/StocksCard";
 
 export default function Stocks() {
   return (
-    <div className="w-full min-h-[50rem] text-white">
-      <div className="flex bg-black w-6/12 h-full m-auto rounded-2xl flex-col justify-center items-center">
+    <div className="w-full min-h-[60rem] text-white">
+      <div className="flex bg-black w-6/12 h-[55rem] m-auto rounded-2xl flex-col justify-center items-center">
         <div className="flex flex-col justify-center items-center">
           <h2 className="text-3xl">POPULAR PRO STOCKS</h2>
           <span className="mt-5">
@@ -12,13 +13,15 @@ export default function Stocks() {
           </span>
         </div>
 
-        <div>SEARCH BAR</div>
+        <div>
+          <SearchBar></SearchBar>
+        </div>
 
         <div className="w-4/5">
-          <ul className="flex flex-row gap-10">
-            <li>LATEST</li>
-            <li>POPULAR</li>
-            <li>PREMIUM</li>
+          <ul className="flex flex-row gap-10 text-gray-400 ">
+            <li className="hover:underline">LATEST</li>
+            <li className="hover:underline">POPULAR</li>
+            <li className="hover:underline text-purple-800">PREMIUM</li>
           </ul>
         </div>
 
