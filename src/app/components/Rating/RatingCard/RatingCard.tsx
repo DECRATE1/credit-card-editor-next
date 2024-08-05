@@ -1,18 +1,30 @@
-export default function RatingCard() {
+interface RatinCardInterface {
+  stars: string;
+  comment: string;
+  name: string;
+  time: string;
+}
+
+export default function RatingCard({
+  stars,
+  comment,
+  name,
+  time,
+}: RatinCardInterface) {
   return (
-    <div className="bg-red-400">
-      <div>****</div>
+    <div className="bg-[#333044] w-4/12 h-72 rounded-xl min-w-min ml-96">
+      <div>{stars}</div>
 
       <div>
-        <span>Nice Nice Nice Nice Nice Nice Nice Nice Nice</span>
+        <span>{comment}</span>
       </div>
 
       <div>
-        <span>Sam Carlos</span>
+        <span>{name}</span>
       </div>
 
       <div>
-        <span>2 days ago</span>
+        <span>{time}</span>
       </div>
     </div>
   );
