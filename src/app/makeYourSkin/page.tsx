@@ -2,9 +2,12 @@
 import Image from "next/image";
 import MakeYourSkinCard from "../components/MakeYourSkinCard/MakeYourSkinCard";
 import { useState } from "react";
+import { Url } from "next/dist/shared/lib/router/router";
 
 export default function MakeYourSkin() {
-  const [isClicked, setIsClicked] = useState(false);
+  const [isClicked, setIsClicked] = useState<boolean>(false);
+  const [file, setFile] = useState<File>();
+  const [url, setUrl] = useState<string | undefined>(undefined);
   const handleSetIsClicked = (boolean: boolean) => {
     setIsClicked(boolean);
   };
@@ -17,12 +20,25 @@ export default function MakeYourSkin() {
         >
           <Image src={"/change.png"} alt="img" width={700} height={700}></Image>
         </div>
-
+        <div>
+          <input
+            type="file"
+            onChange={(e) => {
+              const file = e.target.files?.[0];
+              if (file) {
+                setUrl(URL.createObjectURL(file));
+              }
+            }}
+          ></input>
+        </div>
         <div className="flex w-1/5 h-full">
-          <MakeYourSkinCard
-            handleSetIsClicked={handleSetIsClicked}
-            isClicked={isClicked}
-          ></MakeYourSkinCard>
+          {url && (
+            <MakeYourSkinCard
+              handleSetIsClicked={handleSetIsClicked}
+              isClicked={isClicked}
+              url={url}
+            ></MakeYourSkinCard>
+          )}
         </div>
       </div>
     </div>

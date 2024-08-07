@@ -6,10 +6,12 @@ import Moveable from "react-moveable";
 interface MakeYourSkinCardProps {
   handleSetIsClicked: (boolean: boolean) => void;
   isClicked: boolean;
+  url: string;
 }
 export default function MakeYourSkinCard({
   handleSetIsClicked,
   isClicked,
+  url,
 }: MakeYourSkinCardProps) {
   const refa = useRef(null);
   return (
@@ -17,7 +19,7 @@ export default function MakeYourSkinCard({
       <div className="w-full bg-red-600 h-1/4 relative">
         <div className="w-11/12 h-full" ref={refa}>
           <Image
-            src={"/man1.png"}
+            src={url}
             alt="img"
             fill
             onClick={() => handleSetIsClicked(true)}
